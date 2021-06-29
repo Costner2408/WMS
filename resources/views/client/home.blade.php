@@ -30,7 +30,7 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Account.html">account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/account">account</a></li>
                     <li class="nav-item"><a class="nav-link" href="Complaints.html">complaints</a></li>
                     <li class="nav-item"><a class="nav-link" href="Archives.html">Archives</a></li>
                 </ul>

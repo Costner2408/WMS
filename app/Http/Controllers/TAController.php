@@ -82,9 +82,80 @@ class TAController extends Controller
     {
         //
     }
+    // --------------------------- ADMIN ----------------------------
 
+    public function Ahome(){
+
+        return view('admin.home');
+    }
+
+    public function Aaccount(){
+
+        return view('admin.account');
+    }
+
+    public function Acomplaint(){
+
+        return view('admin.complaint');
+    }
+
+    public function Alogin(){
+
+        return view('admin.login');
+    }
+
+    public function Asms(){
+
+        return view('admin.sms');
+    }
+
+
+
+
+    // --------------------------- CLIENT ----------------------------
+    
     public function home(){
 
         return view('client.home');
+    }
+
+    public function account(){
+
+        return view('client.account');
+    }
+
+    public function archives(){
+
+        return view('client.archives');
+    }
+
+    public function archivesee(){
+
+        return view('client.archivesee');
+    }
+
+    public function complaint(){
+
+        return view('client.complaint');
+    }
+
+    public function editacc(){
+
+        return view('client.edit');
+    }
+
+        public function login(){
+
+        return view('client.login');
+    }
+
+    public function register(){
+
+        return view('client.register');
+    }
+
+    public function wrong(){
+
+        return view('client.wrong');
     }
 }

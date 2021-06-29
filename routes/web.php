@@ -22,5 +22,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/main','TAController@home');
+
+ // --------------------------- ADMIN ----------------------------
+
+
+
+
+
+  // --------------------------- CLIENT ----------------------------
 Route::get('/main','\App\Http\Controllers\TAController@home');
+Route::get('/akun','\App\Http\Controllers\TAController@account');
+Route::get('/archives','\App\Http\Controllers\TAController@archives');
+Route::get('/archivesee','\App\Http\Controllers\TAController@archivesee');
+Route::get('/complaint','\App\Http\Controllers\TAController@complaint');
