@@ -1,0 +1,57 @@
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+#click-link {
+  color: #007bff;
+}
+
+#log-reg {
+  color: rgb(236,236,241);
+  background-color: rgb(80,184,207);
+  width: 110.5469px;
+  height: 47px;
+}
+
+#login .jumbotron {
+  border-radius: 20px;
+  /*padding: 40px;*/
+  background-color: rgba(255,255,255,0.75);
+}
+
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: Raleway;
+}
+
+#jumbo {
+  /*padding: 290px;*/
+  margin: 0 auto;
+  /*max-width: 800px;*/
+  background-color: rgba(255,255,255,0.75);
+}
+
+#contain {
+  padding: 250px;
+  align-content: center;
+  align-items: center;
+}
+
+#intro {
+  /*height: 120%;*/
+  margin-bottom: 20px;
+}
+
+#dropdown {
+  background-color: rgb(80,184,207);
+  font-family: 'Raleway';
+  color: whiTE;
+  font-size: 20px;
+  /*margin-top: 20px;*/
+}
+
