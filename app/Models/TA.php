@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TA extends Model
 {
+    public $table = "waterflow_monitoring_system";
     use HasFactory;
 }

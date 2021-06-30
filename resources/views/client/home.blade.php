@@ -38,7 +38,7 @@
                 </ul>
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
-        <!-- @foreach($results as $result) -->
+        @foreach($Volumes as $Volume)
     </nav>
     <section class="page-section clearfix">
         <div class="container">
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <!-- @endforeach -->
+        @endforeach
     </section>
     <section class="page-section cta">
         <div class="container">

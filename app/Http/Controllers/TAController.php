@@ -115,11 +115,11 @@ class TAController extends Controller
 
     // --------------------------- CLIENT ----------------------------
     
-    public function home($Volume){
+    public function home(){
        
-        $Volume = TA::where('Volume',$Volume)->get();
-
-        return view('client.home',compact('Volume'));
+        $Volumes = TA::where('Nama','Adinda')->pluck('Volume');
+        // $Volumes = $Volume->Volume ;
+        return view('client.home',compact('Volumes'));
         // $waterflow_monitoring_system = DB::select('select Volume from waterflow_monitoring_system where Nama = ?', ['Adinda']);
         // return View::make('client.home')->with('results', $results);
         // $str_json = json_encode($request->results);
