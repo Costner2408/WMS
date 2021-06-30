@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
     <link rel="stylesheet" href="assets/css/untitled-1.css">
@@ -39,17 +42,19 @@
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
         @foreach($Volumes as $Volume)
+        @foreach($Biayas as $Biaya)
     </nav>
     <section class="page-section clearfix">
         <div class="container">
             <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" id="intro" src="assets/img/intro.jpg">
                 <div class="text-center intro-text p-5 rounded bg-faded" id="phone" style="width: 325.5px;height: 397px;max-width: 800 px;">
                     <h2 class="section-heading mb-4"><span id="upper" class="section-heading-upper">this month's Real Time data</span><span id="lower" class="section-heading-lower">VOLUME</span></h2>
-                    <p class="mb-3">{{ $Volume }}</p><span style="font-size: 51px;font-family: Raleway;color: rgb(47,52,56);font-weight: 100;margin-top: 30px;">BIAYA</span>
-                    <p class="mb-3">Real Time database form biaya</p>
+                    <h3 style="font-family:'Allerta Stencil',sans-serif,font-size: 45px;">{{ $Volume }} L</h3><span style="font-size: 51px;font-family: Raleway;color: rgb(47,52,56);font-weight: 100;margin-top: 30px;">BIAYA</span>
+                    <h3 style="font-family:'Allerta Stencil',sans-serif,font-size: 45px;">Rp.{{ $Biaya }}</h3>
                 </div>
             </div>
         </div>
+        @endforeach
         @endforeach
     </section>
     <section class="page-section cta">
