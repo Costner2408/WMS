@@ -30,8 +30,8 @@
                 <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">Log in</h1>
                 <form style="text-align: center;"><label id="label" style="font-size: 21px;">Username</label><input class="form-control" type="text" id="text-input"><label id="label" style="font-size: 21px;">Id Alat</label><input class="form-control" type="text" id="text-input"></form>
                 <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;font-size: 21px;">Login</a></p>
-                <p style="font-size: 20px;text-align: center;">Dont have an account?&nbsp;&nbsp;<a id="click-link" class="register" href="Register.html">Click here</a>&nbsp;</p>
-                <p style="font-size: 20px;text-align: center;">&nbsp;Admin? please login&nbsp;<a id="click-link" class="admin" href="Admin_Login.html">&nbsp;here</a>&nbsp;</p>
+                <p style="font-size: 20px;text-align: center;">Dont have an account?&nbsp;&nbsp;<a id="click-link" class="register" href="register">Click here</a>&nbsp;</p>
+                <p style="font-size: 20px;text-align: center;">&nbsp;Admin? please login&nbsp;<a id="click-link" class="admin" href="alogin">&nbsp;here</a>&nbsp;</p>
             </div>
         </div>
     </section>

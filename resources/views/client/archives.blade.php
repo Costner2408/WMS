@@ -28,11 +28,11 @@
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">WMS</a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="main">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Account.html">account</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Complaints.html">complaints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Archives.html">Archives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="akun">account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="komplain">complaints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arsip">Archives</a></li>
                 </ul>
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
@@ -43,12 +43,22 @@
                 <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">History archives</h1>
                 <form style="text-align: center;"><label id="label" style="font-size: 21px;">check previous stored data by month</label></form>
                 <div class="dropdown show"><button class="btn btn-primary btn-lg dropdown-toggle" aria-expanded="true" data-toggle="dropdown" id="dropdown" type="button">Pilih Bulan</button>
-                    <div class="dropdown-menu show"><a class="dropdown-item" href="#">januari</a><a class="dropdown-item" href="#">februari</a><a class="dropdown-item" href="#">MAret</a><a class="dropdown-item" href="#">MAretA</a></div>
+                    <div class="dropdown-menu show"><a class="dropdown-item" href="#">januari</a><a class="dropdown-item" href="#">februari</a><a class="dropdown-item" href="#">Maret</a><a class="dropdown-item" href="#">April</a>
+                    <a class="dropdown-item" href="#">Mei</a>
+                    <a class="dropdown-item" href="#">Juni</a>
+                    <a class="dropdown-item" href="#">Juli</a>
+                    <a class="dropdown-item" href="#">Agustus</a>
+                    <a class="dropdown-item" href="#">September</a>
+                    <a class="dropdown-item" href="#">Oktober</a>
+                    <a class="dropdown-item" href="#">November</a>
+                    <a class="dropdown-item" href="#">Desember</a>
+                    </div>
+
                 </div>
                 <div class="dropdown show"><button class="btn btn-primary btn-lg dropdown-toggle button2" aria-expanded="true" data-toggle="dropdown" id="dropdown" type="button">Pilih Tahun</button>
-                    <div class="dropdown-menu show"><a class="dropdown-item" href="#"></a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    <div class="dropdown-menu show"><a class="dropdown-item" href="#">2021</a><a class="dropdown-item" href="#">2022</a><a class="dropdown-item" href="#">2023</a></div>
                 </div>
-                <p style="text-align: center;margin-top: 30px;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 105.7031px;height: 50px;"><a id="dropdown" href="Admin_Home.html">Check</a></button></p>
+                <p style="text-align: center;margin-top: 30px;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 105.7031px;height: 50px;"><a id="dropdown" href="liatarsip">Check</a></button></p>
             </div>
         </div>
     </section>

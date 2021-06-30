@@ -28,11 +28,11 @@
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">WMS</a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="main">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Account.html">account</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Complaints.html">complaints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Archives.html">Archives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="akun">account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="komplain">complaints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arsip">Archives</a></li>
                 </ul>
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
@@ -42,7 +42,7 @@
             <div class="jumbotron jumbo-fluid" id="jumbo" style="font-size: 23px;width: 813px;text-align: center;padding: 51px 32px;margin: -37px;margin-left: -76px;"><span style="font-size: 18px;font-style: normal;font-weight: normal;font-family: Raleway, sans-serif;margin-top: 0;text-align: center;">WATERFLOW MONITORING SYSTEM</span>
                 <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">Account settings</h1>
                 <form style="text-align: center;"><label id="label" style="font-size: 21px;">Username</label><input class="form-control" type="text" id="text-input"><label id="label" style="font-size: 21px;">Id Alat</label><input class="form-control" type="text" id="text-input"><label id="label">Alamat</label><input class="form-control" type="text" id="text-input"><label id="label">No.HP</label><input class="form-control" type="text" id="text-input"><label id="label">No.Rekening</label><input class="form-control" type="text" id="text-input"></form>
-                <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 18px;"></a><a id="dropdown" href="Edit_Account.html">edit</a></p>
+                <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 18px;"></a><a id="dropdown" href="edit">edit</a></p>
             </div>
         </div>
     </section>

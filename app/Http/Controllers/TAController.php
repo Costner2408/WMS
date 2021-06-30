@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Models\TA;
 use Illuminate\Http\Request;
 
@@ -114,9 +115,16 @@ class TAController extends Controller
 
     // --------------------------- CLIENT ----------------------------
     
-    public function home(){
+    public function home($Volume){
+       
+        $Volume = TA::where('Volume',$Volume)->get();
 
-        return view('client.home');
+        return view('client.home',compact('Volume'));
+        // $waterflow_monitoring_system = DB::select('select Volume from waterflow_monitoring_system where Nama = ?', ['Adinda']);
+        // return View::make('client.home')->with('results', $results);
+        // $str_json = json_encode($request->results);
+        // echo  $str_json; 
+        // return view('client.home', ['results'=>$waterflow_monitoring_system[0]]);
     }
 
     public function account(){

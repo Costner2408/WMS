@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -22,31 +23,34 @@
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
 
+                
 <body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg2.jpg');">
     <h1 class="text-center text-white d-none d-lg-block site-heading" id="title-heading"><span class="text-primary site-heading-upper mb-3" style="font-size: 25px;color: var(--blue);font-style: normal;">monitors your current clean water usage along with the cost</span><span id="Title" class="site-heading-lower" style="font-size: 59px;">waterflow monitoring system</span></h1>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-lg-4" id="mainNav">
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">WMS</a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="main">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/account">account</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Complaints.html">complaints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Archives.html">Archives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="akun">account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="komplain">complaints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arsip">Archives</a></li>
                 </ul>
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
+        <!-- @foreach($results as $result) -->
     </nav>
     <section class="page-section clearfix">
         <div class="container">
             <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" id="intro" src="assets/img/intro.jpg">
                 <div class="text-center intro-text p-5 rounded bg-faded" id="phone" style="width: 325.5px;height: 397px;max-width: 800 px;">
                     <h2 class="section-heading mb-4"><span id="upper" class="section-heading-upper">this month's Real Time data</span><span id="lower" class="section-heading-lower">VOLUME</span></h2>
-                    <p class="mb-3">Real time volume from database</p><span style="font-size: 51px;font-family: Raleway;color: rgb(47,52,56);font-weight: 100;margin-top: 30px;">BIAYA</span>
-                    <p class="mb-3">Real time biaya from database</p>
+                    <p class="mb-3">{{ $Volume }}</p><span style="font-size: 51px;font-family: Raleway;color: rgb(47,52,56);font-weight: 100;margin-top: 30px;">BIAYA</span>
+                    <p class="mb-3">Real Time database form biaya</p>
                 </div>
             </div>
         </div>
+        <!-- @endforeach -->
     </section>
     <section class="page-section cta">
         <div class="container">
@@ -87,10 +91,10 @@
                 </div>
             </div>
         </div>
+     
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/current-day.js"></script>
 </body>
-
 </html>

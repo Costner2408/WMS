@@ -28,11 +28,11 @@
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">WMS</a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="main">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Account.html">account</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Complaints.html">complaints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Archives.html">Archives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="akun">account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="komplain">complaints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arsip">Archives</a></li>
                 </ul>
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
@@ -67,7 +67,7 @@
                         </table>
                     </div>
                 </form>
-                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="Archives.html" style="font-size: 26px;">Back</a></button></p>
+                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="arsip" style="font-size: 26px;">Back</a></button></p>
             </div>
         </div>
     </section>

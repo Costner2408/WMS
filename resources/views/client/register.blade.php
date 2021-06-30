@@ -30,8 +30,8 @@
                 <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">Register</h1>
                 <form style="text-align: center;"><label id="label" style="font-size: 21px;">Username</label><input class="form-control" type="text" id="text-input"><label id="label" style="font-size: 21px;">Id Alat</label><input class="form-control" type="text" id="text-input"><label id="label">Alamat</label><input class="form-control" type="text" id="text-input"><label id="label">No.HP</label><input class="form-control" type="text" id="text-input"><label id="label">No.Rekening</label><input class="form-control" type="text" id="text-input"></form>
                 <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 22px;">Register</a></p>
-                <p style="font-size: 20px;text-align: center;">Already have an account?&nbsp;&nbsp;<a id="click-link" href="Login.html">Click here</a>&nbsp;</p>
-                <p style="font-size: 20px;text-align: center;">&nbsp;Admin? please login&nbsp;&nbsp;<a id="click-link" href="#">Here</a>&nbsp;</p>
+                <p style="font-size: 20px;text-align: center;">Already have an account?&nbsp;&nbsp;<a id="click-link" href="login">Click here</a>&nbsp;</p>
+                <p style="font-size: 20px;text-align: center;">&nbsp;Admin? please login&nbsp;&nbsp;<a id="click-link" href="alogin">Here</a>&nbsp;</p>
             </div>
         </div>
     </section>
