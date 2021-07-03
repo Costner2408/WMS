@@ -26,13 +26,11 @@ class CreateUsersTable extends Migration
 
             $table->foreign('role_id')
                 ->references('id')
-                ->on('roles')
-                ->onDelete('cascade');
+                ->on('roles');
 
             $table->foreign('profile_id')
                 ->references('id')
-                ->on('profiles')
-                ->onDelete('cascade');
+                ->on('profiles');
         });
     }
 
