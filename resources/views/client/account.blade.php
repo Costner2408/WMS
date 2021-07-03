@@ -37,15 +37,25 @@
             </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
     </nav>
+    @foreach($akuns as $Nama)
+    @foreach($showids as $showid)
+    @foreach($alamats as $alamat)
+    @foreach($numbers as $number)
+    @foreach($reks as $rek)
     <section class="site-heading">
         <div class="container" id="contain">
             <div class="jumbotron jumbo-fluid" id="jumbo" style="font-size: 23px;width: 813px;text-align: center;padding: 51px 32px;margin: -37px;margin-left: -76px;"><span style="font-size: 18px;font-style: normal;font-weight: normal;font-family: Raleway, sans-serif;margin-top: 0;text-align: center;">WATERFLOW MONITORING SYSTEM</span>
                 <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">Account settings</h1>
-                <form style="text-align: center;"><label id="label" style="font-size: 21px;">Username</label><input class="form-control" type="text" id="text-input"><label id="label" style="font-size: 21px;">Id Alat</label><input class="form-control" type="text" id="text-input"><label id="label">Alamat</label><input class="form-control" type="text" id="text-input"><label id="label">No.HP</label><input class="form-control" type="text" id="text-input"><label id="label">No.Rekening</label><input class="form-control" type="text" id="text-input"></form>
-                <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 18px;"></a><a id="dropdown" href="edit">edit</a></p>
+                <form style="text-align: center;"><label id="label" style="font-size: 21px;">Username</label><input class="form-control" type="text" id="text-input" value = "<?php echo $Nama; ?>"><label id="label" style="font-size: 21px;">Id Alat</label><input class="form-control" type="text" id="text-input" value = "<?php echo $showid; ?>"><label id="label">Alamat</label><input class="form-control" type="text" id="text-input"value = "<?php echo $alamat; ?>"><label id="label">No.HP</label><input class="form-control" type="text" id="text-input"value = "<?php echo $number; ?>"><label id="label">No.Rekening</label><input class="form-control" type="text" id="text-input" value = "<?php echo $rek; ?>"></form>
+                <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 18px;" href="{{ route('edit') }}">EDIT</a>
             </div>
         </div>
     </section>
+    @endforeach
+    @endforeach
+    @endforeach
+    @endforeach
+    @endforeach
     <footer>
         <div class="container">
             <div class="row">

@@ -1,17 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
+
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use App\Providers\RouteServiceProvider;
 
-class RegisterController extends Controller
+
+
+class RegistrationController extends Controller
 {
-    /*
+
+        /*
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
@@ -83,4 +87,11 @@ class RegisterController extends Controller
             
         ]);
     }
+    
 }
+
+
+
+
+
+

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TAController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 
 
 /*
@@ -14,6 +16,21 @@ use App\Http\Controllers\TAController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+Route::get('register', 'Auth\RegistrationController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegistrationController@register');
+
+// Password Reset Routes...
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,24 +41,24 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  // --------------------------- ADMIN ----------------------------
- Route::get('/amain','\App\Http\Controllers\TAController@Ahome');
- Route::get('/aaccount','\App\Http\Controllers\TAController@Aaccount');
- Route::get('/acomplaint','\App\Http\Controllers\TAController@Acomplaint');
- Route::get('/alogin','\App\Http\Controllers\TAController@Alogin');
- Route::get('/sms','\App\Http\Controllers\TAController@Asms');
-
+ Route::get('/amain','\App\Http\Controllers\AdminController@Ahome');
+ Route::get('/aaccount','\App\Http\Controllers\AdminController@Aaccount')->name('index');
+ Route::get('/acomplaint','\App\Http\Controllers\AdminController@Acomplaint');
+ Route::get('/alogin','\App\Http\Controllers\AdminController@Alogin');
+ Route::get('/sms','\App\Http\Controllers\AdminController@Asms');
 
 
 
 
 
   // --------------------------- CLIENT ----------------------------
-Route::get('/main','\App\Http\Controllers\TAController@home');
-Route::get('/akun','\App\Http\Controllers\TAController@account');
-Route::get('/arsip','\App\Http\Controllers\TAController@archives');
-Route::get('/liatarsip','\App\Http\Controllers\TAController@archivesee');
-Route::get('/komplain','\App\Http\Controllers\TAController@complaint');
-Route::get('/edit','\App\Http\Controllers\TAController@editacc');
-Route::get('/login','\App\Http\Controllers\TAController@login');
-Route::get('/register','\App\Http\Controllers\TAController@register');
-Route::get('/wrong','\App\Http\Controllers\TAController@wrong');
+Route::get('/main','\App\Http\Controllers\ClientController@home');
+Route::get('/akun','\App\Http\Controllers\ClientController@account');
+Route::get('/arsip','\App\Http\Controllers\ClientController@archives');
+Route::get('/liatarsip','\App\Http\Controllers\ClientController@archivesee');
+Route::get('/komplain','\App\Http\Controllers\ClientController@complaint');
+Route::get('/edit','\App\Http\Controllers\ClientController@editacc')->name('edit');
+// Route::get('/login','\App\Http\Controllers\ClientController@login');
+// Route::get('/register','\App\Http\Controllers\ClientController@register');
+Route::get('/wrong','\App\Http\Controllers\ClientController@wrong');
+Route::get('/konten','\App\Http\Controllers\ClientController@konten');

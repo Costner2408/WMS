@@ -46,34 +46,33 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">nama</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">id alat</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">alamat</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">no.hp</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">no.rekening</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Nama</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Id_Alat</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Alamat</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No_Hp</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No_Rekening</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($akun as $akuns)
                                 <tr>
+                                    <td style="border-color: #ffffff;"> {{ $akuns->Nama }}</td>
+                                    <td style="border-color: #ffffff;"> {{ $akuns->Id_Alat }}</td>
+                                    <td style="border-color: #ffffff;"> {{ $akuns->Alamat}}</td>
+                                    <td style="border-color: #ffffff;"> {{ $akuns->No_Hp }}</td>
+                                    <td style="border-color: #ffffff;"> {{ $akuns->No_Rekening }}</td>
                                     <td style="border-color: #ffffff;"></td>
-                                    <td style="border-color: #ffffff;"></td>
-                                </tr>
-                                <tr style="border-color: #ffffff;">
-                                    <td style="border-color: #ffffff;"></td>
-                                    <td style="border-color: #ffffff;"></td>
-                                </tr>
-                                <tr style="border-color: #ffffff;">
-                                    <td style="border-color: #ffffff;"></td>
-                                    <td style="border-color: #ffffff;"></td>
-                                </tr>
+                                    </tr>                           
+                                    @endforeach                           
                             </tbody>
                         </table>
                     </div>
                 </form>
-                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="Archives.html" style="font-size: 26px;">Back</a></button></p>
+                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="amain" style="font-size: 26px;">Back</a></button></p>
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="container">
             <div class="row">

@@ -33,9 +33,22 @@
                     <li class="nav-item"><a class="nav-link" href="aaccount">account</a></li>
                     <li class="nav-item"><a class="nav-link" href="acomplaint">complaints</a></li>
                     <li class="nav-item"><a class="nav-link" href="sms">SMS</a></li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>                    
                 </ul>
-            </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            </div>
+            <button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
         </div>
+        
     </nav>
     <section class="site-heading">
         <div class="container" id="contain">
@@ -50,27 +63,25 @@
                                     <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">id alat</th>
                                     <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">volume</th>
                                     <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">biaya</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">timestamp</th>
+                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Tanggal</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach($waterflow_monitoring_system as $water)
                                 <tr>
-                                    <td style="border-color: #ffffff;"></td>
-                                    <td style="border-color: #ffffff;"></td>
-                                </tr>
-                                <tr style="border-color: #ffffff;">
-                                    <td style="border-color: #ffffff;"></td>
-                                    <td style="border-color: #ffffff;"></td>
-                                </tr>
-                                <tr style="border-color: #ffffff;">
-                                    <td style="border-color: #ffffff;"></td>
+                                    <td style="border-color: #ffffff  text-align: center;"> {{ $water->Nama }}
+                                    <td style="border-color: #ffffff  text-align: center;"> {{ $water->Id_Alat }}
+                                    <td style="border-color: #ffffff  text-align: center;"> {{ $water->Volume }}
+                                    <td style="border-color: #ffffff  text-align: center;"> {{ $water->Biaya }}
+                                    <td style="border-color: #ffffff  text-align: center;"> {{ $water->Tanggal }}
+                                    </td>
                                     <td style="border-color: #ffffff;"></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
                 </form>
-                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="Archives.html" style="font-size: 26px;">Back</a></button></p>
             </div>
         </div>
     </section>

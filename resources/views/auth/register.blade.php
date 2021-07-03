@@ -61,6 +61,38 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="Id_Alat" class="col-md-4 col-form-label text-md-right">Id_Alat</label>
+
+                            <div class="col-md-6">
+                                <input id="Id_Alat" type="text" class="form-control" name="Id_Alat">
+                            </div>
+                        </div>
+
+                         <div class="form-group row">
+                            <label for="Alamat" class="col-md-4 col-form-label text-md-right">Alamat</label>
+
+                            <div class="col-md-6">
+                                <input id="Alamat" type="text" class="form-control" name="Alamat">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="No_Hp" class="col-md-4 col-form-label text-md-right">No_Hp</label>
+
+                            <div class="col-md-6">
+                                <input id="No_Hp" type="text" class="form-control" name="No_Hp">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="No_Rekening" class="col-md-4 col-form-label text-md-right">No_Rekening</label>
+
+                            <div class="col-md-6">
+                                <input id="No_Rekening" type="text" class="form-control" name="No_Rekening">
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

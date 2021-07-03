@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Models\TA;
+use App\Models\Akun;
+use App\Models\Complaints;
 use Illuminate\Http\Request;
 
 class TAController extends Controller
 {
+    // public function __construct(){
+    //     // $this->name= auth()->user()->Nama;
+    //     // $this->name = 'Adinda';
+    // }
+
+    private $name;
+    
+
     /**
      * Display a listing of the resource.
      *
@@ -83,89 +93,5 @@ class TAController extends Controller
     {
         //
     }
-    // --------------------------- ADMIN ----------------------------
 
-    public function Ahome(){
-
-        return view('admin.home');
-    }
-
-    public function Aaccount(){
-
-        return view('admin.account');
-    }
-
-    public function Acomplaint(){
-
-        return view('admin.complaint');
-    }
-
-    public function Alogin(){
-
-        return view('admin.login');
-    }
-
-    public function Asms(){
-
-        return view('admin.sms');
-    }
-
-
-
-
-    // --------------------------- CLIENT ----------------------------
-    
-    public function home(){
-       
-        $Volumes = TA::where('Nama','Adinda')->pluck('Volume');
-        $Biayas = TA::where('Nama','Adinda')->pluck('Biaya');
-        // $Volumes = $Volume->Volume ;
-        return view('client.home',compact('Volumes','Biayas'));
-
-        // $waterflow_monitoring_system = DB::select('select Volume from waterflow_monitoring_system where Nama = ?', ['Adinda']);
-        // return View::make('client.home')->with('results', $results);
-        // $str_json = json_encode($request->results);
-        // echo  $str_json; 
-        // return view('client.home', ['results'=>$waterflow_monitoring_system[0]]);
-    }
-
-    public function account(){
-
-        return view('client.account');
-    }
-
-    public function archives(){
-
-        return view('client.archives');
-    }
-
-    public function archivesee(){
-
-        return view('client.archivesee');
-    }
-
-    public function complaint(){
-
-        return view('client.complaint');
-    }
-
-    public function editacc(){
-
-        return view('client.edit');
-    }
-
-        public function login(){
-
-        return view('client.login');
-    }
-
-    public function register(){
-
-        return view('client.register');
-    }
-
-    public function wrong(){
-
-        return view('client.wrong');
-    }
 }
