@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
+//        $role_id = auth()->user()->role_id;
+//        swith
         return view('client.home');
     }
 }
