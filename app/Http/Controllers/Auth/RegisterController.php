@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Profile;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -53,13 +54,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'Id_Alat' => ['required', 'string', 'max:255'],
-            'Alamat' => ['required', 'string', 'max:255'],
-            'No_Hp' => ['required', 'string', 'max:255'],
-            'No_Rekening' => ['required', 'string', 'max:255'],
-            'role_id' => ['required', 'string', 'max:255'],
-            
-            
+            'device_id' => ['required', 'numeric'],
+            'address' => ['required', 'string'],
+            'phone' => ['required', 'numeric'],
+            'account_number' => ['required', 'numeric']
         ]);
     }
 
@@ -71,16 +69,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $profile = [
+            'device_id' => $data['device_id'],
+            'address' => $data['address'],
+            'phone' => $data['phone'],
+            'account_number' => $data['account_number'],
+        ];
+
+        if (count($profile) > 1) {
+            Profile::create($profile);
+        }
         return User::create([
+            'role_id' => 2,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'Id_Alat' => $data['Id_Alat'],
-            'Alamat' => $data['Alamat'],
-            'No_Hp' => $data['No_Hp'],
-            'No_Rekening' => $data['No_Rekening'],
-            'role_id' => '2'
-            
         ]);
     }
 }

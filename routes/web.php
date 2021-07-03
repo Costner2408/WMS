@@ -17,19 +17,19 @@ use App\Http\Controllers\ClientController;
 |
 */
 // Authentication Routes...
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('login', '\App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', '\App\Http\Controllers\Auth\LoginController@login');
+Route::post('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
-Route::get('register', 'Auth\RegistrationController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegistrationController@register');
+Route::get('register', '\App\Http\Controllers\ClientController@register')->name('register');
+Route::post('register', '\App\Http\Controllers\Auth\RegistrationController@register');
 
-// Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+//// Password Reset Routes...
+//Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+//Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+//Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 Route::get('/', function () {
@@ -41,24 +41,37 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  // --------------------------- ADMIN ----------------------------
- Route::get('/amain','\App\Http\Controllers\AdminController@Ahome');
- Route::get('/aaccount','\App\Http\Controllers\AdminController@Aaccount')->name('index');
- Route::get('/acomplaint','\App\Http\Controllers\AdminController@Acomplaint');
- Route::get('/alogin','\App\Http\Controllers\AdminController@Alogin');
- Route::get('/sms','\App\Http\Controllers\AdminController@Asms');
-
-
+ Route::group([
+     'middleware' => 'auth',
+     'prefix' => 'admin',
+     'as' => 'admin.'
+ ], function () {
+     Route::get('/main','\App\Http\Controllers\AdminController@home')->name('main');
+     Route::get('/profile','\App\Http\Controllers\AdminController@profile')->name('profile');
+     Route::get('/complaint','\App\Http\Controllers\AdminController@complaint')->name('complaint');
+     Route::get('/login','\App\Http\Controllers\AdminController@login')->name('login');
+     Route::get('/sms','\App\Http\Controllers\AdminController@sms')->name('sms');
+ });
 
 
 
   // --------------------------- CLIENT ----------------------------
-Route::get('/main','\App\Http\Controllers\ClientController@home');
-Route::get('/akun','\App\Http\Controllers\ClientController@account');
-Route::get('/arsip','\App\Http\Controllers\ClientController@archives');
-Route::get('/liatarsip','\App\Http\Controllers\ClientController@archivesee');
-Route::get('/komplain','\App\Http\Controllers\ClientController@complaint');
-Route::get('/edit','\App\Http\Controllers\ClientController@editacc')->name('edit');
-// Route::get('/login','\App\Http\Controllers\ClientController@login');
-// Route::get('/register','\App\Http\Controllers\ClientController@register');
-Route::get('/wrong','\App\Http\Controllers\ClientController@wrong');
-Route::get('/konten','\App\Http\Controllers\ClientController@konten');
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'client',
+    'as' => 'client.'
+], function() {
+    Route::get('/main','\App\Http\Controllers\ClientController@home')->name('main');
+    Route::get('/akun','\App\Http\Controllers\ClientController@profile')->name('profile');
+    Route::get('/arsip','\App\Http\Controllers\ClientController@archives')->name('archive');
+    Route::get('/liatarsip','\App\Http\Controllers\ClientController@archivesee')->name('archive.detail');
+
+    Route::get('/komplain','\App\Http\Controllers\ClientController@complaint')->name('complaint');
+    Route::post('/komplain','\App\Http\Controllers\ClientController@complaintSave')->name('complaint.post');
+
+    Route::get('/edit','\App\Http\Controllers\ClientController@editacc')->name('edit');
+    Route::put('/edit', '\App\Http\Controllers\ClientController@edit')->name('edit.put');
+
+    Route::get('/wrong','\App\Http\Controllers\ClientController@wrong')->name('wrong');
+    Route::get('/konten','\App\Http\Controllers\ClientController@konten')->name('content');
+});

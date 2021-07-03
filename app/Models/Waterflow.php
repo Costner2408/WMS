@@ -5,8 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TA extends Model
+class Waterflow extends Model
 {
-    public $table = "waterflow_monitoring_system";
     use HasFactory;
+
+    protected $fillable = [
+        'name', 'device_id', 'volume', 'cost'
+    ];
 }

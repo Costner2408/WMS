@@ -3,41 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TA;
-use App\Models\Akun;
-use App\Models\Complaints;
+use App\Models\Waterflow;
+use App\Models\Profile;
+use App\Models\Complaint;
 
 class AdminController extends Controller
 {
-    public function __construct(){
+    public function home(){
+        $waterflow = Waterflow::orderBy('created_at', 'ASC')->limit(3)->get();
 
-        $this->middleware('auth');
-    }
-    
-    public function Ahome(){
-
-        $waterflow_monitoring_system = TA::orderBy('Tanggal', 'ASC')->limit(3)->get();
-
-        return view('admin.home',compact('waterflow_monitoring_system'));
+        return view('admin.home', compact('waterflow'));
     }
 
-    public function Aaccount(){
+    public function profile(){
 
-        $akun = Akun::all(); 
-        return view('admin.account',compact('akun'));
+        $profiles = Profile::with('user')->all();
+        return view('admin.account', compact('profiles'));
     }
 
-    public function Acomplaint(){
+    public function complaint(){
 
         return view('admin.complaint');
     }
 
-    public function Alogin(){
+    public function login(){
 
         return view('admin.login');
     }
 
-    public function Asms(){
+    public function sms(){
 
         return view('admin.sms');
     }

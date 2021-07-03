@@ -1,109 +1,37 @@
-<!DOCTYPE html>
-<html>
+@extends('admin.layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Admin Account</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
-    <link rel="stylesheet" href="assets/css/untitled-1.css">
-    <link rel="stylesheet" href="assets/css/untitled-2.css">
-    <link rel="stylesheet" href="assets/css/untitled-3.css">
-    <link rel="stylesheet" href="assets/css/untitled-4.css">
-    <link rel="stylesheet" href="assets/css/untitled-5.css">
-    <link rel="stylesheet" href="assets/css/untitled-6.css">
-    <link rel="stylesheet" href="assets/css/untitled-7.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-</head>
-
-<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg2.jpg');">
-    <h1 class="text-center text-white d-none d-lg-block site-heading" id="title-heading"><span class="text-primary site-heading-upper mb-3" style="font-size: 25px;color: var(--blue);font-style: normal;">monitors your current clean water usage along with the cost</span><span id="Title" class="site-heading-lower" style="font-size: 59px;">waterflow monitoring system</span></h1>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-lg-4" id="mainNav">
-        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">WMS</a>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="amain">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aaccount">account</a></li>
-                    <li class="nav-item"><a class="nav-link" href="acomplaint">complaints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sms">SMS</a></li>
-                </ul>
-            </div><button data-target="#navbarResponsive" data-toggle="collapse" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
-        </div>
-    </nav>
-    <section class="site-heading">
-        <div class="container" id="contain">
-            <div class="jumbotron jumbotron-fluid" style="font-size: 23px;width: 954px;text-align: center;padding: 51px 32px;margin: -37px;margin-left: -144px;" id="jumbo"><span style="font-size: 18px;font-style: normal;font-weight: normal;font-family: Raleway, sans-serif;margin-top: 0;text-align: center;">WATERFLOW MONITORING SYSTEM</span>
-                <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">account data</h1>
-                <form style="text-align: center;"><label id="label" style="font-size: 21px;">check client's personal account data&nbsp;</label>
-                    <div class="table-responsive" style="border-style: solid;">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Nama</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Id_Alat</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Alamat</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No_Hp</th>
-                                    <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No_Rekening</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($akun as $akuns)
-                                <tr>
-                                    <td style="border-color: #ffffff;"> {{ $akuns->Nama }}</td>
-                                    <td style="border-color: #ffffff;"> {{ $akuns->Id_Alat }}</td>
-                                    <td style="border-color: #ffffff;"> {{ $akuns->Alamat}}</td>
-                                    <td style="border-color: #ffffff;"> {{ $akuns->No_Hp }}</td>
-                                    <td style="border-color: #ffffff;"> {{ $akuns->No_Rekening }}</td>
-                                    <td style="border-color: #ffffff;"></td>
-                                    </tr>                           
-                                    @endforeach                           
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
-                <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="amain" style="font-size: 26px;">Back</a></button></p>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4 footer-navigation">
-                    <h3><a href="#" style="color: rgb(167,162,162);text-align: center;font-family: Raleway, sans-serif;font-size: 22px;">Waterflow Monitoring System</a></h3>
-                    <p class="links"><a href="#">Measuring</a><strong> · </strong><a href="#">Storing</a><strong> · </strong><a href="#">Distributing</a><strong> · · </strong><a href="#">Connecting</a><strong> · </strong><a href="#">Assuring</a></p>
-                    <p class="company-name">Achmadi &amp; Adinda © 2021</p>
+@section('content')
+    <div class="container" id="contain">
+        <div class="jumbotron jumbotron-fluid" style="font-size: 23px;width: 954px;text-align: center;padding: 51px 32px;margin: -37px;margin-left: -144px;" id="jumbo"><span style="font-size: 18px;font-style: normal;font-weight: normal;font-family: Raleway, sans-serif;margin-top: 0;text-align: center;">WATERFLOW MONITORING SYSTEM</span>
+            <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">account data</h1>
+            <form style="text-align: center;"><label id="label" style="font-size: 21px;">check client's personal account data&nbsp;</label>
+                <div class="table-responsive" style="border-style: solid;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Nama</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">ID Alat</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Alamat</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No Hp</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">No Rekening</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach ($profiles as $profile)
+                            <tr>
+                                <td style="border-color: #ffffff;"> {{ $profile->user->name }}</td>
+                                <td style="border-color: #ffffff;"> {{ $profile->device_id }}</td>
+                                <td style="border-color: #ffffff;"> {{ $profile->address }}</td>
+                                <td style="border-color: #ffffff;"> {{ $profile->phone }}</td>
+                                <td style="border-color: #ffffff;"> {{ $profile->account_number }}</td>
+                                <td style="border-color: #ffffff;"></td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-sm-6 col-md-4 footer-contacts">
-                    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                        <p><span class="new-line-span">Jl.Gegerkalong Hilir</span> Bandung, Indonesia</p>
-                    </div>
-                    <div><i class="fa fa-phone footer-contacts-icon"></i>
-                        <p class="footer-center-info email text-left"> +6287889376067</p>
-                    </div>
-                    <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                        <p> <a href="#" target="_blank">WMS@company.com</a></p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-4 footer-about">
-                    <h4>About the company</h4>
-                    <p> Website ini adalah Proyek Tugas Akhir Program Studi D3-Teknik Telekomunikasi Politeknik Negeri Bandung</p>
-                    <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
-                </div>
-            </div>
+            </form>
+            <p style="text-align: center;"><button class="btn btn-primary" id="dropdown" type="button" style="width: 96.5938px;height: 51px;font-size: 21px;margin-top: 20px;"><a id="back" href="{{ route('admin.main') }}" style="font-size: 26px;">Back</a></button></p>
         </div>
-    </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/current-day.js"></script>
-</body>
-
-</html>
+    </div>
+@endsection
