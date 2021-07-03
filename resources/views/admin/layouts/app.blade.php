@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/untitled.css') }}">
 </head>
 
-<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg2.jpg');">
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), {{ URL::asset('assets/img/bg2.jpg') }};">
 <h1 class="text-center text-white d-none d-lg-block site-heading" id="title-heading"><span class="text-primary site-heading-upper mb-3" style="font-size: 25px;color: var(--blue);font-style: normal;">monitors your current clean water usage along with the cost</span><span id="Title" class="site-heading-lower" style="font-size: 59px;">waterflow monitoring system</span></h1>
 
 @include('admin.layouts.header')
