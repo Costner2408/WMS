@@ -77,10 +77,11 @@ class RegisterController extends Controller
         ];
 
         if (count($profile) > 1) {
-            Profile::create($profile);
+            $created_profile = Profile::create($profile);
         }
         return User::create([
             'role_id' => 2,
+            'profile_id' => $created_profile->id,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

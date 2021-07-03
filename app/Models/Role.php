@@ -14,6 +14,6 @@ class Role extends Model
     ];
 
     public function user() {
-        return $this->belongsTo('users');
+        return $this->hasMany('users');
     }
 }

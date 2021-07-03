@@ -44,10 +44,10 @@ class User extends Authenticatable
     ];
 
     public function role() {
-        return $this->hasOne('roles');
+        return $this->belongsTo('roles');
     }
 
     public function profile() {
-        return $this->hasOne('profiles');
+        return $this->belongsTo('profiles');
     }
 }
