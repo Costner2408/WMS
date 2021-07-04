@@ -8,7 +8,7 @@
                 @csrf
 
                 <input type="hidden" name="_method" value="PUT" />
-                <input type="hidden" name="id" value="{{ $profile->id }}" />
+                <input type="hidden" name="id" value="{{ $user->profile->id }}" />
 
                 <label id="label" style="font-size: 21px;">Nama</label>
                 <input class="form-control" type="text" id="nama" name="name" value="{{ $user->name }}">
