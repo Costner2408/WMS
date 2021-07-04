@@ -13,6 +13,7 @@ class AuthController extends Controller
     }
 
     public function register(Request $request) {
+        dd($request->all());
         $profile = [
             'device_id' => $request->device_id,
             'address' => $request->address,
