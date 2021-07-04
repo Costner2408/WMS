@@ -62,34 +62,34 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Id_Alat" class="col-md-4 col-form-label text-md-right">Id_Alat</label>
+                            <label for="device_id" class="col-md-4 col-form-label text-md-right">ID Alat</label>
 
                             <div class="col-md-6">
-                                <input id="Id_Alat" type="text" class="form-control" name="Id_Alat">
+                                <input id="device_id" type="text" class="form-control" name="device_id">
                             </div>
                         </div>
 
                          <div class="form-group row">
-                            <label for="Alamat" class="col-md-4 col-form-label text-md-right">Alamat</label>
+                            <label for="address" class="col-md-4 col-form-label text-md-right">Alamat</label>
 
                             <div class="col-md-6">
-                                <input id="Alamat" type="text" class="form-control" name="Alamat">
+                                <input id="address" type="text" class="form-control" name="address">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="No_Hp" class="col-md-4 col-form-label text-md-right">No_Hp</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">No. HP</label>
 
                             <div class="col-md-6">
-                                <input id="No_Hp" type="text" class="form-control" name="No_Hp">
+                                <input id="phone" type="text" class="form-control" name="phone">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="No_Rekening" class="col-md-4 col-form-label text-md-right">No_Rekening</label>
+                            <label for="account_number" class="col-md-4 col-form-label text-md-right">No Rekening</label>
 
                             <div class="col-md-6">
-                                <input id="No_Rekening" type="text" class="form-control" name="No_Rekening">
+                                <input id="account_number" type="text" class="form-control" name="account_number">
                             </div>
                         </div>
 
