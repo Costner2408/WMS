@@ -23,8 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        $role_id = auth()->user()->role_id;
-//        swith
-        return view('client.home');
+        $role_id = auth()->user()->role_id;
+        switch($role_id) {
+            case 1:
+                return redirect()->route('admin.main');
+            case 2:
+                return redirect()->route('client.main');
+            default:
+                return view('homeg');
+        }
     }
 }
