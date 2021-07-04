@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Waterflow;
+use App\Models\User;
 use App\Models\Profile;
 use App\Models\Complaint;
 
@@ -17,7 +18,7 @@ class AdminController extends Controller
 
     public function profile(){
 
-        $profiles = Profile::with('user')->get();
+        $profiles = User::with('profile')->get();
         return view('admin.account', compact('profiles'));
     }
 

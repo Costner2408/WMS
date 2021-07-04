@@ -17,13 +17,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($profiles as $profile)
+                        @foreach ($profiles as $user)
                             <tr>
-                                <td style="border-color: #ffffff;"> {{ $profile->user->name }}</td>
-                                <td style="border-color: #ffffff;"> {{ $profile->device_id }}</td>
-                                <td style="border-color: #ffffff;"> {{ $profile->address }}</td>
-                                <td style="border-color: #ffffff;"> {{ $profile->phone }}</td>
-                                <td style="border-color: #ffffff;"> {{ $profile->account_number }}</td>
+                                <td style="border-color: #ffffff;"> {{ $user->name }}</td>
+                                <td style="border-color: #ffffff;"> {{ $user->profile->device_id }}</td>
+                                <td style="border-color: #ffffff;"> {{ $user->profile->address }}</td>
+                                <td style="border-color: #ffffff;"> {{ $user->profile->phone }}</td>
+                                <td style="border-color: #ffffff;"> {{ $user->profile->account_number }}</td>
                                 <td style="border-color: #ffffff;"></td>
                             </tr>
                         @endforeach
