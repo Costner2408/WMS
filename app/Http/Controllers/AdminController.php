@@ -17,7 +17,7 @@ class AdminController extends Controller
 
     public function profile(){
 
-        $profiles = Profile::with('user')->all();
+        $profiles = Profile::with('user')->get();
         return view('admin.account', compact('profiles'));
     }
 
