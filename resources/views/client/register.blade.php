@@ -8,32 +8,31 @@
                 @csrf
 
                 <label id="label" style="font-size: 21px;">Email</label>
-                <input class="form-control" type="text" id="text-input" name="email">
+                <input class="form-control" type="text" name="email">
 
                 <label id="label" style="font-size: 21px;">Password</label>
-                <input class="form-control" type="password" id="text-input" name="password">
+                <input class="form-control" type="password" name="password">
 
                 <label id="label" style="font-size: 21px;">Password Confirmation</label>
-                <input class="form-control" type="password" id="text-input" name="password_confirmation">
+                <input class="form-control" type="password" name="password_confirmation">
 
 
                 <label id="label" style="font-size: 21px;">ID Alat</label>
-                <input class="form-control" type="text" id="text-input" name="device_id">
+                <input class="form-control" type="text" name="device_id">
 
                 <label id="label">Alamat</label>
-                <input class="form-control" type="text" id="text-input" name="address">
+                <input class="form-control" type="text" name="address">
 
                 <label id="label">No.HP</label>
-                <input class="form-control" type="text" id="text-input" name="phone">
+                <input class="form-control" type="text" name="phone">
 
                 <label id="label">No.Rekening</label>
-                <input class="form-control" type="text" id="text-input" name="account_number">
+                <input class="form-control" type="text" name="account_number">
 
                 <input type="submit" class="btn btn-primary" value="Register"/>
             </form>
             <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 22px;">Register</a></p>
             <p style="font-size: 20px;text-align: center;">Already have an account?&nbsp;&nbsp;<a id="click-link" href="{{ route('login') }}">Click here</a>&nbsp;</p>
-            <p style="font-size: 20px;text-align: center;">&nbsp;Admin? please login&nbsp;&nbsp;<a id="click-link" href="{{ route('admin.login') }}">Here</a>&nbsp;</p>
         </div>
     </div>
 @endsection
