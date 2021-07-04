@@ -11,7 +11,7 @@
                 <input class="form-control" type="text" id="name" name="name" value="{{ auth()->user()->name }}">
 
                 <label id="label">Keluhan</label>
-                <input class="form-control" type="text" style="height: 451px;margin-bottom: 46px;" id="komplain" name="komplain">
+                <input class="form-control" type="text" style="height: 451px;margin-bottom: 46px;" id="komplain" name="complaint">
 
                 <input type="submit" class="btn btn-primary" value="KIRIM" />
             </form>
