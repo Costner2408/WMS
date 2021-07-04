@@ -22,11 +22,9 @@ class ClientController extends Controller
 
     public function profile(){
         $name = auth()->user()->name;
-        $profile  = Profile::with(['users', function ($query) use ($name) {
-            $query->where('name', $name);
-        }])->first();
+        $user  = User::where('name', $name)->with('profile')->first();
 
-        return view('client.account',compact('profile'));
+        return view('client.account',compact('user'));
     }
 
     public function archives(){
@@ -60,11 +58,9 @@ class ClientController extends Controller
 
     public function editacc() {
         $name = auth()->user()->name;
-        $profile = Profile::with(['users'], function ($query) use ($name) {
-            $query->where('name', $name);
-        })->first();
+        $user = User::where('name', $name)->with('profile')->first();
 
-        return view('client.edit', compact('profile'));
+        return view('client.edit', compact('user'));
     }
 
     public function edit(Request $request) {

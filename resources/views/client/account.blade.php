@@ -7,23 +7,23 @@
             <table class="table table-borderless">
                 <tr>
                     <td width="200">Nama</td>
-                    <td>: {{ $profile->user->name }}</td>
+                    <td>: {{ $user->name }}</td>
                 </tr>
                 <tr>
                     <td>ID Alat</td>
-                    <td>: {{ $profile->device_id }}</td>
+                    <td>: {{ $user->profile->device_id }}</td>
                 </tr>
                 <tr>
                     <td>Alamat</td>
-                    <td>: {{ $profile->address }}</td>
+                    <td>: {{ $user->profile->address }}</td>
                 </tr>
                 <tr>
                     <td>No. HP</td>
-                    <td>: {{ $profile->phone }}</td>
+                    <td>: {{ $user->profile->phone }}</td>
                 </tr>
                 <tr>
                     <td>No. Rekening</td>
-                    <td>: {{ $profile->account_number }}</td>
+                    <td>: {{ $user->profile->account_number }}</td>
                 </tr>
             </table>
             <p style="text-align: center;"><a class="btn btn-primary" role="button" id="log-reg" style="text-align: center;width: 110.5469px;font-size: 18px;" href="{{ route('client.edit') }}">EDIT</a>

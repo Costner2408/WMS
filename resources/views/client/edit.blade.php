@@ -11,19 +11,19 @@
                 <input type="hidden" name="id" value="{{ $profile->id }}" />
 
                 <label id="label" style="font-size: 21px;">Nama</label>
-                <input class="form-control" type="text" id="nama" name="name" value="{{ $profile->user->name }}">
+                <input class="form-control" type="text" id="nama" name="name" value="{{ $user->name }}">
 
                 <label id="label" style="font-size: 21px;">Id Alat</label>
-                <input class="form-control" type="text" id="id" name="device_id" value="{{ $profile->device_id }}">
+                <input class="form-control" type="text" id="id" name="device_id" value="{{ $user->profile->device_id }}">
 
                 <label id="label">Alamat</label>
-                <input class="form-control" type="text" id="alamat" name="address" value="{{ $profile->address }}">
+                <input class="form-control" type="text" id="alamat" name="address" value="{{ $user->profile->address }}">
 
                 <label id="label">No.HP</label>
-                <input class="form-control" type="text" id="number" name="phone" value="{{ $profile->phone }}">
+                <input class="form-control" type="text" id="number" name="phone" value="{{ $user->profile->phone }}">
 
                 <label id="label">No.Rekening</label>
-                <input class="form-control" type="text" id="rek" name="account_number" value="{{ $profile->account_number }}">
+                <input class="form-control" type="text" id="rek" name="account_number" value="{{ $user->profile->account_number }}">
 
                 <input type="submit" class="btn btn-primary" value="EDIT" />
             </form>
