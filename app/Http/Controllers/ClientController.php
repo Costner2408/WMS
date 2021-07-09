@@ -34,14 +34,16 @@ class ClientController extends Controller
         return view('client.archives');
     }
 
-    public function archivesee(){
+    public function archivesee(Request $request){
 
-
-
-        return view('client.archivesee');
+        $name = auth()->user()->name;
+        $waterflow = Waterflow::where('name', $name)->whereMonth('created_at', $request->month)->first();
+        return view('client.archivesee', compact('waterflow'));
     }
 
     public function complaint(){
+
+
         return view('client.complaint');
     }
 
@@ -98,6 +100,14 @@ class ClientController extends Controller
     public function konten(){
 
         return view('client.content');
+    }
+
+    public function rumah(){
+        // $this->name = $name;
+        $name = auth()->user()->name;
+        $waterflow = Waterflow::orderBy('created_at', 'ASC')->where('name', $name)->first();
+
+        return view('temp', compact('waterflow'));
     }
 
 

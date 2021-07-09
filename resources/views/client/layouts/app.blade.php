@@ -28,13 +28,15 @@
 @include('client.layouts.header')
 
 <section class="site-heading">
-
+<div class="row">
     @yield('content')
-
+    </div>
 </section>
 
-@include('client.layouts.footer')
-
+<div class="row">
+    @include('client.layouts.footer')
+</div>    
+<div>
 <script src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('assets/js/current-day.js') }}"></script>

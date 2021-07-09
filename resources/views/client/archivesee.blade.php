@@ -16,15 +16,15 @@
                         <tbody>
                         <tr>
                             <td style="border-color: #ffffff;">total penggunaan air</td>
-                            <td style="border-color: #ffffff;">50l</td>
+                            <td style="border-color: #ffffff;">{{ $waterflow ? $waterflow->volume : '-' }} L</td>
                         </tr>
                         <tr style="border-color: #ffffff;">
                             <td style="border-color: #ffffff;">total biaya</td>
-                            <td style="border-color: #ffffff;">49.000</td>
+                            <td style="border-color: #ffffff;">Rp.{{ $waterflow ? number_format($waterflow->cost) : '-' }}</td>
                         </tr>
                         <tr style="border-color: #ffffff;">
                             <td style="border-color: #ffffff;">status bayar</td>
-                            <td style="border-color: #ffffff;">Belum lunas</td>
+                            <td style="border-color: #ffffff;">{{ $waterflow ? $waterflow->status : '-' }}</td>
                         </tr>
                         </tbody>
                     </table>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +18,13 @@ use App\Http\Controllers\ClientController;
 |
 */
 // Authentication Routes...
-//Route::get('login', '\App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
-//Route::post('login', '\App\Http\Controllers\Auth\LoginController@login');
-//Route::post('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-//
-//// Registration Routes...
-//Route::get('register', '\App\Http\Controllers\ClientController@register')->name('register');
-//Route::post('register', '\App\Http\Controllers\AuthController@register');
+Route::get('login', '\App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', '\App\Http\Controllers\Auth\LoginController@login');
+Route::post('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+Route::get('register', '\App\Http\Controllers\ClientController@register')->name('register');
+Route::post('register', '\App\Http\Controllers\Auth\RegistrationController@register');
 
 //// Password Reset Routes...
 //Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
@@ -64,8 +65,8 @@ Route::group([
     Route::get('/main','\App\Http\Controllers\ClientController@home')->name('main');
     Route::get('/akun','\App\Http\Controllers\ClientController@profile')->name('profile');
     Route::get('/arsip','\App\Http\Controllers\ClientController@archives')->name('archive');
-    Route::get('/liatarsip','\App\Http\Controllers\ClientController@archivesee')->name('archive.detail');
-
+    Route::post('/liatarsip','\App\Http\Controllers\ClientController@archivesee')->name('liatarsip');
+    
     Route::get('/komplain','\App\Http\Controllers\ClientController@complaint')->name('complaint');
     Route::post('/komplain','\App\Http\Controllers\ClientController@complaintSave')->name('complaint.post');
 
@@ -74,4 +75,5 @@ Route::group([
 
     Route::get('/wrong','\App\Http\Controllers\ClientController@wrong')->name('wrong');
     Route::get('/konten','\App\Http\Controllers\ClientController@konten')->name('content');
+    Route::get('/hom','\App\Http\Controllers\ClientController@rumah')->name('hom');
 });

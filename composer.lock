@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "445b2b56036f4fb3c253035674db75e4",
+    "content-hash": "a8518bc0e3bfd1721150a795a4b1ec09",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1498,6 +1498,53 @@
             "time": "2020-12-14T13:15:25+00:00"
         },
         {
+            "name": "nasution/zenziva",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mul14/zenziva.php.git",
+                "reference": "71b1cfd461302f6c735239ca37123f80d7b3fbf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mul14/zenziva.php/zipball/71b1cfd461302f6c735239ca37123f80d7b3fbf0",
+                "reference": "71b1cfd461302f6c735239ca37123f80d7b3fbf0",
+                "shasum": ""
+            },
+            "require": {
+                "rmccue/requests": "~1.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nasution\\Zenziva\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mulia Arifandi Nasution",
+                    "email": "mul14.net@gmail.com",
+                    "homepage": "http://mul14.net"
+                }
+            ],
+            "description": "Zenziva - Indonesia Online SMS Gateway",
+            "keywords": [
+                "sms",
+                "voice-message",
+                "whatsapp",
+                "zenziva"
+            ],
+            "support": {
+                "issues": "https://github.com/mul14/zenziva.php/issues",
+                "source": "https://github.com/mul14/zenziva.php/tree/v2.1.0"
+            },
+            "time": "2020-11-06T00:49:25+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.49.0",
             "source": {
@@ -2371,6 +2418,59 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "rmccue/requests",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmccue/Requests.git",
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmccue/Requests/zipball/87932f52ffad70504d93f04f15690cf16a089546",
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "requests/test-server": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Requests": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan McCue",
+                    "homepage": "http://ryanmccue.info"
+                }
+            ],
+            "description": "A HTTP library written in PHP, for human beings.",
+            "homepage": "http://github.com/rmccue/Requests",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "idna",
+                "ipv6",
+                "iri",
+                "sockets"
+            ],
+            "support": {
+                "issues": "https://github.com/rmccue/Requests/issues",
+                "source": "https://github.com/rmccue/Requests/tree/master"
+            },
+            "time": "2016-10-13T00:11:37+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
