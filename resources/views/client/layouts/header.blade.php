@@ -3,7 +3,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ route('client.main') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">about</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('client.profile') }}">account</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('client.complaint') }}">complaints</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('client.archive') }}">Archives</a></li>

@@ -29,8 +29,7 @@ class HomeController extends Controller
                 return redirect()->route('admin.main');
             case 2:
                 return redirect()->route('client.main');
-            default:
-                return view('homeg');
+
         }
     }
 }

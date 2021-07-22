@@ -32,6 +32,8 @@ class AuthController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
+        
+
         return redirect()->route('login');
     }
 }

@@ -51,7 +51,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
      Route::get('/profile','\App\Http\Controllers\AdminController@profile')->name('profile');
      Route::get('/complaint','\App\Http\Controllers\AdminController@complaint')->name('complaint');
      Route::get('/login','\App\Http\Controllers\AdminController@login')->name('login');
-     Route::get('/sms','\App\Http\Controllers\AdminController@sms')->name('sms');
+     Route::get('/arsip','\App\Http\Controllers\ClientController@archives')->name('archive');
+     Route::post('/liatarsip','\App\Http\Controllers\ClientController@archivesee')->name('liatarsip');
  });
 
 

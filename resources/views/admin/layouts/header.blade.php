@@ -3,10 +3,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ route('admin.main') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('admin.profile') }}">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('admin.complaint') }}">Complaints</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('admin.sms') }}">SMS</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('admin.archive') }}">Archive</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();

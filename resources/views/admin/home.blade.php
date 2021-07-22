@@ -23,7 +23,7 @@
                                 <td style="border-color: #ffffff  text-align: center;"> {{ $water->device_id }}
                                 <td style="border-color: #ffffff  text-align: center;"> {{ $water->volume }}
                                 <td style="border-color: #ffffff  text-align: center;"> {{ $water->cost }}
-                                <td style="border-color: #ffffff  text-align: center;"> {{ $water->created_at->format('d/m/Y') }}
+                                <td style="border-color: #ffffff  text-align: center;"> {{ $water->updated_at->format('d/m/Y') }}
                                 </td>
                                 <td style="border-color: #ffffff;"></td>
                             </tr>
