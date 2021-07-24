@@ -1,6 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<html>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -62,4 +62,12 @@
         </div>
     </div>
 </div>
-@endsection
+
+<script src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ URL::asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/current-day.js') }}"></script>
+
+</body>
+
+</html>
+

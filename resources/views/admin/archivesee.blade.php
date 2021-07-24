@@ -9,23 +9,22 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">juni</th>
-                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">data</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Name</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Vol</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Cost</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">Status Bayar</th>
                         </tr>
                         </thead>
                         <tbody>
+
+                            @foreach ($waterflow as $waterflows)
                         <tr>
-                            <td style="border-color: #ffffff;">total penggunaan air</td>
-                            <td style="border-color: #ffffff;">{{ $waterflow ? $waterflow->volume : '-' }} L</td>
+                            <td style="border-color: #ffffff;">{{ $waterflows ? $waterflows->name : '-'  }}</td>
+                            <td style="border-color: #ffffff;">{{ $waterflows ? $waterflows->volume : '-' }} L</td>
+                            <td style="border-color: #ffffff;">Rp.{{ $waterflows ? number_format($waterflows->cost) : '-' }}</td>
+                            <td style="border-color: #ffffff;">{{ $waterflows ? $waterflows->status : '-' }}</td>
                         </tr>
-                        <tr style="border-color: #ffffff;">
-                            <td style="border-color: #ffffff;">total biaya</td>
-                            <td style="border-color: #ffffff;">Rp.{{ $waterflow ? number_format($waterflow->cost) : '-' }}</td>
-                        </tr>
-                        <tr style="border-color: #ffffff;">
-                            <td style="border-color: #ffffff;">status bayar</td>
-                            <td style="border-color: #ffffff;">{{ $waterflow ? $waterflow->status : '-' }}</td>
-                        </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

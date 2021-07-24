@@ -6,12 +6,10 @@
             <h1 style="margin-top: 40px;margin-bottom: 30px;text-align: center;">History archives</h1>
             <form style="text-align: center;">
                 <label id="label" style="font-size: 21px;">check previous stored data by month</label>
-                 <label for="name" id="label" style="font-size: 21px;">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" >
             </form>
 
             <div class="dropdown show"><button class="btn btn-primary btn-lg dropdown-toggle" aria-expanded="true" data-toggle="dropdown" id="dropdown" type="button">Pilih Bulan</button>
-                <form action="{{ route('admin.liatarsip') }}" method="POST">
+                <form action="{{ route('admin.lookarsip') }}" method="POST">
                 @csrf    
                     <select name="month">
                         <option value="1">Januari</option>

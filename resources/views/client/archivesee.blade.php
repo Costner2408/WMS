@@ -9,7 +9,7 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">juni</th>
+                            <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">category</th>
                             <th style="border-style: solid;border-top-color: rgb(4,4,4);border-bottom-color: rgb(4,4,4);">data</th>
                         </tr>
                         </thead>

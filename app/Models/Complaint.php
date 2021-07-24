@@ -12,4 +12,6 @@ class Complaint extends Model
     protected $fillable = [
         'name', 'complaint'
     ];
+
+    protected $dates = ['Tanggal'];
 }

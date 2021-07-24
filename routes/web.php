@@ -27,10 +27,10 @@ Route::get('register', '\App\Http\Controllers\ClientController@register')->name(
 Route::post('register', '\App\Http\Controllers\Auth\RegistrationController@register');
 
 //// Password Reset Routes...
-//Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-//Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-//Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 Route::get('/', function () {
@@ -48,11 +48,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
      'as' => 'admin.'
  ], function () {
      Route::get('/main','\App\Http\Controllers\AdminController@home')->name('main');
-     Route::get('/profile','\App\Http\Controllers\AdminController@profile')->name('profile');
+     Route::get('/propil','\App\Http\Controllers\AdminController@profiles')->name('propil');
      Route::get('/complaint','\App\Http\Controllers\AdminController@complaint')->name('complaint');
      Route::get('/login','\App\Http\Controllers\AdminController@login')->name('login');
-     Route::get('/arsip','\App\Http\Controllers\ClientController@archives')->name('archive');
-     Route::post('/liatarsip','\App\Http\Controllers\ClientController@archivesee')->name('liatarsip');
+     Route::get('/arsip','\App\Http\Controllers\AdminController@archive')->name('archive');
+     Route::post('/lookarsip','\App\Http\Controllers\AdminController@archivesee')->name('lookarsip');
  });
 
 

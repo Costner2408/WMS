@@ -15,18 +15,14 @@
                         </tr>
                         </thead>
                         <tbody>
+                             @foreach($complaints as $komplain)
                         <tr>
-                            <td style="border-color: #ffffff;"></td>
-                            <td style="border-color: #ffffff;"></td>
-                        </tr>
-                        <tr style="border-color: #ffffff;">
-                            <td style="border-color: #ffffff;"></td>
+                            <td style="border-color: #ffffff text-align: center;">{{ $komplain->name }}</td>
+                            <td style="border-color: #ffffff text-align: center;">{{ $komplain->Tanggal->format('d/m/Y') }}</td>
+                            <td style="border-color: #ffffff ;">{{ $komplain->complaint }}</td>
                             <td style="border-color: #ffffff;"></td>
                         </tr>
-                        <tr style="border-color: #ffffff;">
-                            <td style="border-color: #ffffff;"></td>
-                            <td style="border-color: #ffffff;"></td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
